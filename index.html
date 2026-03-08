@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Creador de Criaturas RPG</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app">
+    <h1>Creador de criaturas</h1>
+    <p class="subtitle">Genera enemigos y aliados con estadísticas listas para tu mesa de rol.</p>
+
+    <section class="panel controls">
+      <label for="tipo">Tipo de criatura</label>
+      <select id="tipo"></select>
+
+      <label for="nivel">Nivel de desafío <span id="nivelValor">5</span></label>
+      <input id="nivel" type="range" min="1" max="20" value="5" />
+
+      <label for="nombre">Nombre personalizado (opcional)</label>
+      <input id="nombre" type="text" placeholder="Ej: Sombra devoradora" />
+
+      <button id="generar" type="button">Generar criatura</button>
+    </section>
+
+    <section class="panel result" aria-live="polite">
+      <h2 id="criaturaNombre">—</h2>
+      <p id="criaturaDescripcion">Pulsa "Generar criatura" para crear una ficha.</p>
+
+      <div class="stats-grid">
+        <article><h3>PV</h3><p id="pv">—</p></article>
+        <article><h3>Ataque</h3><p id="ataque">—</p></article>
+        <article><h3>Defensa</h3><p id="defensa">—</p></article>
+        <article><h3>Velocidad</h3><p id="velocidad">—</p></article>
+      </div>
+
+      <h3>Habilidades</h3>
+      <ul id="habilidades"></ul>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
